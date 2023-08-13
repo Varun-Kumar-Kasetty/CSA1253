@@ -1,0 +1,15 @@
+
+    	decimal = decimal + r * pow( 8 , p );	
+    	++p;
+    	
+	}
+	
+	return decimal;
+}
+int main() {
+	int n, i, k;
+	printf("Enter Octal: ");
+	scanf("%d", &n);
+	printf("\nDecimal of Octal Number %d is : %d", n, OctalToDecimal(n));
+	return 0;
+}
