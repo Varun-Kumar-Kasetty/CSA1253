@@ -1,0 +1,27 @@
+LDA 4200
+MOV E,A
+LDA 4202
+MOV B,A
+LXI H,0000H
+MVI D,00H
+NEXT: DAD D
+DCR B
+JNZ NEXT
+SHLD 4205h
+hlt
+
+
+
+LDA 8500
+   	MOV B, A
+   	LDA 8001
+   	MOV C, A
+   	CPI 00
+   	JZ LOOP
+   	XRA A
+   	LOOP1: ADD E
+   	DCR C
+   	JZ LOOP
+   	JMP LOOP1
+   	LOOP: STA 8002
+  	 RST 1      
